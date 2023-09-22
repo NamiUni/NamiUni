@@ -6,8 +6,8 @@ IntPredicate fizz = (int num) -> num % 3 == 0;
 IntPredicate buzz = (int num) -> num % 5 == 0;
 IntStream.rangeClosed(1, 100)
     .mapToObj(i -> new StringBuilder()
-        .append(fizz.test(i) ? "fizz" : "")
-        .append(buzz.test(i) ? "buzz" : "")
+        .append(fizz.test(i) ? "Fizz" : "")
+        .append(buzz.test(i) ? "Buzz" : "")
         .append(!fizz.or(buzz).test(i) ? i : ""))
     .forEach(System.out::println);
 ```
