@@ -7,7 +7,7 @@
     <img height="20" src="https://img.shields.io/twitter/follow/NamiUni?label=Twitter&logo=twitter&style=flat" />
   </a>
 </p>
-I am a Japanese who enjoys programming.
+I am a Japanese who enjoys Java programming.
 
 ```java
 IntPredicate fizz = (int num) -> num % 3 == 0;
