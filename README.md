@@ -1,12 +1,4 @@
 ### Hi there 👋
-<p align="left">
-  <a href="https://github.com/NamiUni/NamiUni/">
-    <img src="https://komarev.com/ghpvc/?username=NamiUni" alt="NamiUni" />
-  </a>
-  <a href="http://twitter.com/namiu_unitarou">
-    <img height="20" src="https://img.shields.io/twitter/follow/NamiUni?label=Twitter&logo=twitter&style=flat" />
-  </a>
-</p>
 I am a Japanese who enjoys Java programming.
 
 ```java
