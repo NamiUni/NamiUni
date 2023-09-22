@@ -11,23 +11,13 @@ I am a Japanese who enjoys programming.
 
 ```java
 IntPredicate fizz = (int num) -> num % 3 == 0;
-        IntPredicate buzz = (int num) -> num % 5 == 0;
-        IntStream.of(99)
-                .forEach(i -> {
-                    if (fizz.test(i)) {
-                        System.out.print("Fizz");
-                    }
-
-                    if (buzz.test(i)) {
-                        System.out.print("Buzz");
-                    }
-
-                    if (!fizz.and(buzz).test(i)) {
-                        System.out.print(i);
-                    }
-
-                    System.out.println();
-                });
+IntPredicate buzz = (int num) -> num % 5 == 0;
+IntStream.rangeClosed(1, 100)
+    .mapToObj(i -> new StringBuilder()
+        .append(fizz.test(i) ? "fizz" : "")
+        .append(buzz.test(i) ? "buzz" : "")
+        .append(!fizz.or(buzz).test(i) ? i : ""))
+    .forEach(System.out::println);
 ```
 <!--
 **NamiUni/NamiUni** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
