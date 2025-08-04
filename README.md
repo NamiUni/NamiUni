@@ -2,14 +2,18 @@
 I am a Japanese who enjoys Java programming.
 
 ```java
-IntPredicate fizz = (int num) -> num % 3 == 0;
-IntPredicate buzz = (int num) -> num % 5 == 0;
 IntStream.rangeClosed(1, 100)
-    .mapToObj(i -> new StringBuilder()
-        .append(fizz.test(i) ? "Fizz" : "")
-        .append(buzz.test(i) ? "Buzz" : "")
-        .append(!fizz.or(buzz).test(i) ? i : ""))
-    .forEach(System.out::println);
+        .mapToObj(i -> Optional.of(i)
+                .filter(num -> num % 15 == 0)
+                .map(num -> "FizzBuzz")
+                .orElse(Optional.of(i)
+                        .filter(num -> num % 3 == 0)
+                        .map(num -> "Fizz")
+                        .orElse(Optional.of(i)
+                                .filter(num -> num % 5 == 0)
+                                .map(num -> "Buzz")
+                                .orElse(String.valueOf(i)))))
+        .forEach(System.out::println);
 ```
 <!--
 **NamiUni/NamiUni** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
